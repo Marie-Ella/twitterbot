@@ -1,6 +1,6 @@
 # twitterbot
 
-This is a Twitter Bot than has been set up using javascript and node.js. It uses the twit npm package. The bot can be found here: https://twitter.com/eu_immigrant and it relies on a counter that is implemented here: http://igor.gold.ac.uk/~msegg002/counter/Counter.html
+This is a Twitter Bot that has been set up using javascript and node.js. It uses the twit npm package. The bot can be found here: https://twitter.com/eu_immigrant and it relies on a counter that is implemented here: http://igor.gold.ac.uk/~msegg002/counter/Counter.html
 I created the bot as a university project and this bot https://twitter.com/trumptaxme inspired me.
 The bot relies on an array of different phrases and a count function.
 
