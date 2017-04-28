@@ -6,6 +6,18 @@ var config = require('./config');
 
 var T = new Twit(config);
 
+var stream = T.stream('user');
+
+stream.on('follow', followed);
+
+// tweet at new followers
+function followed(eventMsg) {
+  var name = eventMsg.source.name;
+  var screenName = eventMsg.source.screen_name;
+  T.post('statuses/update', { status: '.@' + screenName + ' thanks for following!'}, tweeted);
+}
+
+
 //counter
 var amount = formatMoney(amount);
 var startDate = new Date(2017, 0, 01);
