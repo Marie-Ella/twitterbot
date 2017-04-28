@@ -62,11 +62,7 @@ function formatMoney(amount) {
 
   'So far in 2017 EEA immigrants have contributed about ' + amount + ' to the United Kingdom’s economy.',
 
-  '“Between 2001 and 2011 recent EEA immigrants contributed to the fiscal system 34% more than they took out, with a net fiscal contribution of about 22.1 billion GBP,” study says.',
-
   'Figures show that for every £1 EEA immigrants get in benefits in the UK they pay £1.34 into the the system.',
-
-  'Study says: “Rather than being a drain on the UK’s fiscal system, immigrants arriving since the early 2000s have made substantial net contributions to its public finances”',
 
   'The net contribution of EEA immigrants to the UK in 2017 so far amounts to ' + amount + ' .',
 
