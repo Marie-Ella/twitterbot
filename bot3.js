@@ -17,6 +17,44 @@ function followed(eventMsg) {
   T.post('statuses/update', { status: '.@' + screenName + ' thanks for following!'}, tweeted);
 }
 
+// find a tweet with specific hashtag and favourite it
+var favoriteTweet = function(){
+  var params = {
+      q: '#MakeJuneTheEndofMay',  // chosen hashtag, can be multiple
+      result_type: 'recent',
+      lang: 'en'
+  }
+
+  // get tweets
+  T.get('search/tweets', params, function(err,data){
+
+    // find tweet
+    var tweet = data.statuses;
+    var randomTweet = ranDom(tweet);   // pick a random tweet
+
+    // if random tweet exists
+    if(typeof randomTweet != 'undefined'){
+      // Tell TWITTER to favourite
+      T.post('favorites/create', {id: randomTweet.id_str}, function(err, response){
+        // if there was an error while favourite
+        if(err){
+          console.log('The Tories will crush you.');
+        }
+        else{
+          console.log('Make June The End of May - yay!');
+        }
+      });
+    }
+  });
+}
+// favourite when start
+favoriteTweet();
+
+// function to pick a random tweet
+function ranDom (arr) {
+  var index = Math.floor(Math.random()*arr.length);
+  return arr[index];
+};
 
 //counter
 var amount = formatMoney(amount);
